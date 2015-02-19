@@ -10,3 +10,5 @@
 7. aggregates the data by subject, activity and measurements type
 8.  writes the table to a text file in the working directory named gettingAndCleaningDataProject.txt
 
+Variable descriptions are avaliable in the code_book file
+
