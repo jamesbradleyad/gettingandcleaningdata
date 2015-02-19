@@ -16,7 +16,7 @@ y =rbind(y_train,y_test)
 S =rbind(subject_train,subject_test)
 names(X)<- n$V2
 #grep for needed columns
-X<-X[,grep("sum()|std()", names(X), value=TRUE)]
+X<-X[,grep("mean()|std()", names(X), value=TRUE)]
 names(S)<- 'subject'
 X<-cbind(S,X, y)
 #join activity label
