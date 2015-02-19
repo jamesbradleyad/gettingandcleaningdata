@@ -26,7 +26,7 @@ X$V1 <- NULL
 names(X)<- tolower(gsub('[])|(|-]','',names(X)))
 #melt into tidy long format
 stacked <-melt(X, id.vars=c('subject','activity'),var='measure')
-tidydata <-aggregate(stacked[,4], list(stacked$subject,stacked$activity,stacked$variables), mean)
+tidydata <-aggregate(stacked[,4], list(stacked$subject,stacked$activity,stacked$measure), mean)
 names(tidydata)<-names(stacked)
 #write table to txt
 write.table(tidydata, file='gettingAndCleaningDataProject.txt' ,row.name=F) 
